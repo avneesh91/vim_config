@@ -32,6 +32,7 @@ Plugin 'kien/ctrlp.vim'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'scrooloose/nerdtree'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -52,3 +53,5 @@ colorscheme gruvbox
 set t_Co=256
 set laststatus=2
 set background=dark
+
+"autocmd vimenter * NERDTree
