@@ -55,3 +55,10 @@ set laststatus=2
 set background=dark
 
 "autocmd vimenter * NERDTree
+
+set foldmethod=syntax
+
+nnoremap <C-a> <C-w>>
+nnoremap <C-z> <C-w><
+nnoremap <C-e> <C-w>+
+nnoremap <C-r> <C-w>-
