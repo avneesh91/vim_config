@@ -1,3 +1,4 @@
+syntax on
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -33,6 +34,12 @@ Plugin 'kien/ctrlp.vim'
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdtree'
+" Plugin 'fatih/vim-go'
+Plugin 'danro/rename.vim'
+Plugin 'tpope/vim-eunuch'
+Plugin 'rust-lang/rust.vim'
+Plugin 'tweekmonster/gofmt.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -53,6 +60,7 @@ colorscheme gruvbox
 set t_Co=256
 set laststatus=2
 set background=dark
+set autoread
 
 "autocmd vimenter * NERDTree
 
@@ -62,3 +70,5 @@ nnoremap <C-a> <C-w>>
 nnoremap <C-z> <C-w><
 nnoremap <C-e> <C-w>+
 nnoremap <C-r> <C-w>-
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
